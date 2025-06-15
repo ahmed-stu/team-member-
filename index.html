@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فريق العمل | The Payday Arena</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      direction: rtl;
+    }
+
+    .overlay {
+      background-color: rgba(155, 156, 154, 0.585);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      margin: 0;
+      color: #003366; /* أزرق أنيق */
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 22px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .team-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #003366;
+    }
+
+    .job {
+      font-size: 15px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .phone {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .links {
+      margin: 10px 0 20px;
+    }
+
+    .links a {
+      margin: 0 5px;
+      color: #0077b5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>The Payday Arena</h1>
+    <h2>فريق العمل | Team Members</h2>
+
+    <div class="team-container">
+
+      <!-- أحمد -->
+      <div class="card">
+        <img src="ahmed.jpg" alt="Ahmed">
+        <div class="name">أحمد سلامة | Ahmed Salama</div>
+        <div class="job">تصميم الخرائط | Map Design</div>
+        <div class="phone">رقم الجوال: 05xxxxxxxx</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/ahmed" target="_blank">LinkedIn</a>
+          <a href="https://ahmed.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <!-- سامي -->
+      <div class="card">
+        <img src="sami.jpg" alt="Sami">
+        <div class="name">سامي | Sami</div>
+        <div class="job">تصميم غرفة اللاعب | Player Room Design</div>
+        <div class="phone">رقم الجوال: 05xxxxxxxx</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/sami" target="_blank">LinkedIn</a>
+          <a href="https://sami.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <!-- فهد -->
+      <div class="card">
+        <img src="fahad.jpg" alt="Fahad">
+        <div class="name">فهد | Fahad</div>
+        <div class="job">ميكانيك اللاعب | Player Mechanics</div>
+        <div class="phone">رقم الجوال: 05xxxxxxxx</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/fahad" target="_blank">LinkedIn</a>
+          <a href="https://fahad.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <!-- عبد السلام -->
+      <div class="card">
+        <img src="abdulsalam.jpg" alt="Abdul Salam">
+        <div class="name">عبد السلام | Abdulsalam</div>
+        <div class="job">ميكانيك العدو | Enemy Mechanics</div>
+        <div class="phone">رقم الجوال: 05xxxxxxxx</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/abdulsalam" target="_blank">LinkedIn</a>
+          <a href="https://abdulsalam.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
