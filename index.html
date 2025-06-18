@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang='ar' dir='rtl'>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset='UTF-8'>
+  <meta charset="UTF-8">
   <title>فريق العمل | The Payday Arena</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link href='https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Amiri:wght@400;700&display=swap' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-dark: #7a2d2d; /* Roman brick red */
+      --primary-dark: #7a2d2d;
       --primary-gold: #c9a646;
       --primary-light: #d4b483;
       --glass-bg: rgba(0, 0, 0, 0.55);
@@ -18,19 +18,18 @@
 
     body {
       margin: 0;
-      font-family: 'Amiri', 'Cinzel', Georgia, serif;
+      font-family: 'Amiri', 'Cinzel', serif;
       background: url('roman_bg.jpg') no-repeat center center/cover fixed;
       direction: rtl;
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.65);
+      background-color: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(2px);
       min-height: 100vh;
       padding: 40px 16px;
     }
 
-    /* Hero section */
     .hero {
       max-width: 800px;
       margin: 0 auto 40px;
@@ -39,7 +38,7 @@
 
     .hero-img {
       width: 100%;
-      aspect-ratio: 1/1;
+      max-height: 400px;
       object-fit: cover;
       border-radius: 24px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.35);
@@ -57,8 +56,6 @@
       font-size: 48px;
       margin-bottom: 10px;
       color: var(--primary-dark);
-      letter-spacing: 1px;
-      font-family: 'Cinzel', 'Amiri', serif;
     }
 
     h2 {
@@ -66,10 +63,8 @@
       font-size: 28px;
       margin: 32px 0 20px;
       color: #222;
-      font-family: 'Cinzel', 'Amiri', serif;
     }
 
-    /* description */
     .description {
       max-width: 900px;
       margin: 0 auto 50px;
@@ -79,7 +74,6 @@
       color: #333;
     }
 
-    /* gallery */
     .gallery {
       display: flex;
       justify-content: center;
@@ -97,9 +91,10 @@
       transition: transform 0.3s ease;
     }
 
-    .gallery img:hover { transform: scale(1.05); }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-    /* team cards */
     .team-container {
       max-width: 1100px;
       margin: auto;
@@ -112,7 +107,6 @@
       background: var(--glass-bg);
       border-radius: 20px;
       backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
       border: 1px solid var(--glass-border);
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
       overflow: hidden;
@@ -121,16 +115,44 @@
       padding-bottom: 20px;
     }
 
-    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.35); }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+    }
 
-    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-    .name { font-size: 21px; font-weight: bold; margin: 12px 0 6px; color: #ffffff; font-family: 'Amiri', 'Cinzel', serif; }
-    .job { font-size: 15px; color: #cccccc; margin-bottom: 8px; font-family: 'Amiri', 'Cinzel', serif; }
-    .phone, .email { font-size: 14px; color: #bbbbbb; margin-bottom: 6px; }
+    .name {
+      font-size: 21px;
+      font-weight: bold;
+      margin: 12px 0 6px;
+      color: #fff;
+    }
 
-    .email a { color: var(--primary-light); text-decoration: none; }
-    .email a:hover { text-decoration: underline; }
+    .job {
+      font-size: 15px;
+      color: #ddd;
+      margin-bottom: 8px;
+    }
+
+    .phone, .email {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 6px;
+    }
+
+    .email a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .email a:hover {
+      text-decoration: underline;
+    }
 
     .links a {
       display: inline-block;
@@ -144,62 +166,97 @@
       transition: opacity 0.2s;
     }
 
-    .links a:nth-child(2) { background: linear-gradient(to right, #e74c3c, #c0392b); }
-    .links a:hover { opacity: 0.85; }
+    .links a:nth-child(2) {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+    }
 
-    @media (max-width: 600px) { h1{font-size:38px;} h2{font-size:24px;} }
+    .links a:hover {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      h2 { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
-  <div class='overlay'>
-    <div class='hero'>
-      <img src='hero-placeholder.jpg' alt='صورة الغلاف' class='hero-img'>
-      <p class='hero-desc'>هنا الوصف المختصر للمشروع، عدّل النص كما تشاء.</p>
+  <div class="overlay">
+    <div class="hero">
+      <img src="hero-placeholder.jpg" alt="صورة الغلاف" class="hero-img">
+      <p class="hero-desc">هنا وصف موجز للمشروع يمكن تعديله لاحقًا حسب الحاجة.</p>
     </div>
 
     <h1>The Payday Arena</h1>
 
     <h2>وصف اللعبة</h2>
-    <p class='description'>
-      The Payday Arena هي لعبة أكشن تكتيكية ثلاثية الأبعاد تدور أحداثها في ساحة معارك داخل بنك محصّن. يتحكم اللاعب في فريق من الشخصيات، لكل منها قدرات خاصة، في مواجهة موجات من الأعداء. تعتمد اللعبة على استراتيجيات ذكية، وتفاعل بين الشخصيات، مع تصميم ثلاثي الأبعاد دقيق وذكاء اصطناعي متطور للعدو.
+    <p class="description">
+      The Payday Arena هي لعبة أكشن تكتيكية ثلاثية الأبعاد تدور أحداثها في ساحة معركة داخل بنك محصّن. يتحكم اللاعب في فريق من الشخصيات ذات قدرات مختلفة، ويواجه موجات من الأعداء باستخدام استراتيجيات ذكية وتنسيق فعال بين الفريق.
     </p>
 
     <h2>صور من اللعبة</h2>
-    <div class='gallery'>
-      <img src='game1.jpg' alt='Game Screenshot 1'>
-      <img src='game2.jpg' alt='Game Screenshot 2'>
-      <img src='game3.jpg' alt='Game Screenshot 3'>
+    <div class="gallery">
+      <img src="game1.jpg" alt="Game Screenshot 1">
+      <img src="game2.jpg" alt="Game Screenshot 2">
+      <img src="game3.jpg" alt="Game Screenshot 3">
     </div>
 
     <h2>فريق العمل</h2>
-    <div class='team-container'>
-      <!-- أحمد -->
-      <div class='card'>
-        <img src='Ahmed.jpg' alt='Ahmed'>
-        <div class='name'>أحمد سلامة | Ahmed Salama</div>
-        <div class='job'>النمذجة ثلاثية الأبعاد + التحريك | 3D Modeling + Animation</div>
-        <div class='phone'>رقم الجوال: 0501563803</div>
-        <div class='email'>البريد: <a href='mailto:hrbe250@gmail.com'>hrbe250@gmail.com</a></div>
-        <div class='links'>
-          <a href='https://www.linkedin.com/in/ahmd-hrbe-9533a021b' target='_blank'>LinkedIn</a>
-          <a href='https://ahmed-stu.itch.io' target='_blank'>itch.io</a>
+    <div class="team-container">
+
+      <!-- Ahmed -->
+      <div class="card">
+        <img src="Ahmed.jpg" alt="Ahmed">
+        <div class="name">أحمد سلامة | Ahmed Salama</div>
+        <div class="job">النمذجة ثلاثية الأبعاد + التحريك<br>3D Modeling + Animation</div>
+        <div class="phone">0501563803</div>
+        <div class="email">hrbe250@gmail.com</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/ahmd-hrbe-9533a021b" target="_blank">LinkedIn</a>
+          <a href="https://ahmed-stu.itch.io" target="_blank">itch.io</a>
         </div>
       </div>
 
-      <!-- سامي -->
-      <div class='card'>
-        <img src='sami.jpg' alt='Sami'>
-        <div class='name'>سامي | Sami</div>
-        <div class='job'>تصميم اللعبة | Game Design</div>
-        <div class='phone'>رقم الجوال: 0502345678</div>
-        <div class='email'>البريد: <a href='mailto:sami@example.com'>sami@example.com</a></div>
-        <div class='links'>
-          <a href='https://www.linkedin.com/in/sami-alotaibi-614636273' target='_blank'>LinkedIn</a>
-          <a href='https://sami.itch.io' target='_blank'>itch.io</a>
+      <!-- Sami -->
+      <div class="card">
+        <img src="sami.jpg" alt="Sami">
+        <div class="name">سامي | Sami</div>
+        <div class="job">تصميم اللعبة<br>Game Design</div>
+        <div class="phone">0502345678</div>
+        <div class="email">sami@example.com</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/sami-alotaibi-614636273" target="_blank">LinkedIn</a>
+          <a href="https://sami.itch.io" target="_blank">itch.io</a>
         </div>
       </div>
 
-      <!-- فهد -->
-      <div class='card'>
-        <img src='fahad.jpg' alt='Fahad'>
-        <div class='name'>فهد | Fah
+      <!-- Fahad -->
+      <div class="card">
+        <img src="fahad.jpg" alt="Fahad">
+        <div class="name">فهد | Fahad</div>
+        <div class="job">نمذجة اللاعب + ميكانيك اللاعب<br>Player Modeling + Mechanics</div>
+        <div class="phone">0503456789</div>
+        <div class="email">fahad@example.com</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/fahad" target="_blank">LinkedIn</a>
+          <a href="https://fahad.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <!-- AbdulSalam -->
+      <div class="card">
+        <img src="abdulsalam.jpg" alt="Abdulsalam">
+        <div class="name">عبد السلام | Abdulsalam</div>
+        <div class="job">ميكانيك العدو + الذكاء الاصطناعي<br>Enemy Mechanics + AI</div>
+        <div class="phone">0504567890</div>
+        <div class="email">abdulsalam@example.com</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/abdulsalam" target="_blank">LinkedIn</a>
+          <a href="https://abdulsalam.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
