@@ -3,144 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <title>فريق العمل | The Payday Arena</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('Screenshot 2025-06-15 174644.png') no-repeat center center fixed;
+    background-size: cover;
+    direction: rtl;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('Screenshot 2025-06-15 174644.png') no-repeat center center fixed;
-      background-size: cover;
-      direction: rtl;
-    }
+  .overlay {
+    background-color: rgba(240, 240, 240, 0.5); /* خفف الرمادي */
+    min-height: 100vh;
+    padding: 50px 20px;
+  }
 
-    .overlay {
-      background-color: rgba(240, 240, 240, 0.7);
-      min-height: 100vh;
-      padding: 50px 20px;
-    }
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #003366;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+  }
 
-    h1 {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 10px;
-      color: #003366;
-      font-family: 'Georgia', serif;
-      letter-spacing: 2px;
-    }
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #222;
+    margin: 30px 0 20px;
+  }
 
-    h2 {
-      text-align: center;
-      font-size: 24px;
-      color: #222;
-      margin: 30px 0 20px;
-    }
+  .description {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
 
-    .description {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      font-size: 18px;
-      color: #444;
-      line-height: 1.7;
-      margin-bottom: 50px;
-    }
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
 
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
-    }
+  .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
 
-    .gallery img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+  .team-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
 
-    .team-container {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+  .card {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+  }
 
-    .card {
-      background: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      padding-bottom: 20px;
-    }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+  }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+  .name {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 12px 0 6px;
+    color: #ffffff;
+  }
 
-    .name {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 10px 0 5px;
-      color: #003366;
-    }
+  .job {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 8px;
+  }
 
-    .job {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 8px;
-    }
+  .phone, .email {
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-bottom: 6px;
+  }
 
-    .phone, .email {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 6px;
-    }
+  .email a {
+    color: #66b3ff;
+    text-decoration: none;
+  }
 
-    .email a {
-      color: #0056b3;
-      text-decoration: none;
-    }
+  .email a:hover {
+    text-decoration: underline;
+  }
 
-    .email a:hover {
-      text-decoration: underline;
-    }
+  .links a {
+    display: inline-block;
+    margin: 5px 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(to right, #0a66c2, #004182);
+    transition: opacity 0.2s;
+  }
 
-    .links a {
-      display: inline-block;
-      margin: 5px 8px;
-      padding: 6px 14px;
-      font-size: 13px;
-      text-decoration: none;
-      border-radius: 20px;
-      color: white;
-      background-color: #0077b5;
-      transition: background-color 0.2s;
-    }
+  .links a:nth-child(2) {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+  }
 
-    .links a:nth-child(2) {
-      background-color: #e74c3c;
-    }
+  .links a:hover {
+    opacity: 0.85;
+  }
+</style>
 
-    .links a:hover {
-      opacity: 0.85;
-    }
-  </style>
 </head>
 <body>
   <div class="overlay">
