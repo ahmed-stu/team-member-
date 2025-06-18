@@ -8,6 +8,7 @@
   <style>
     :root {
       --primary-blue: #2d6fa7;
+      --imperial-gold: #d4af37;
       --glass-bg: rgba(255, 255, 255, 0.12);
       --glass-border: rgba(255, 255, 255, 0.2);
       --text-dark: #112;
@@ -32,8 +33,9 @@
     h1 {
       text-align: center;
       font-size: 46px;
-      color: var(--primary-blue);
+      color: var(--imperial-gold);
       margin-bottom: 20px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
     }
 
     h2 {
@@ -49,11 +51,12 @@
       text-align: center;
       font-size: 18px;
       line-height: 1.8;
-      color: #111;
+      color: var(--imperial-gold);
       background: rgba(255,255,255,0.3);
       padding: 16px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
 
     .hero {
@@ -138,8 +141,9 @@
     }
 
     .name { font-size: 20px; font-weight: bold; margin-top: 10px; color: #003355; }
-    .job, .phone, .email { font-size: 15px; color: #333; margin: 5px 0; }
-    .email a { color: #1c6ea4; text-decoration: none; }
+    .job { font-size: 15px; color: #333; margin: 5px 0; }
+    .phone { font-size: 15px; color: var(--primary-blue); margin: 5px 0; }
+    .email a { font-size: 15px; color: var(--primary-blue); text-decoration: none; }
     .email a:hover { text-decoration: underline; }
 
     .links {
@@ -202,21 +206,21 @@
   <div class="overlay">
 
     <div class="hero">
-      <img src="THE PAY DAY ARERNA png.png" alt="بوستر اللعبة" class="hero-img">
+      <img src="THE PAY DAY ARENA png.png" alt="بوستر اللعبة" class="hero-img">
     </div>
 
     <h1>The Payday Arena</h1>
 
     <h2>وصف اللعبة</h2>
     <p class="description">
-      في ساحة رومانية مليئة بالصراع والدم، يخوض البطل "لوسيوس فارو" نزالاً من أجل استعادة شرفه.  
-      قاتل ضد زعماء، راوغ ضرباتهم، وكن آخر من يبقى واقفًا.  
-      The Payday Arena ليست مجرد لعبة، إنها ساحة اختبار للكرامة، المهارة، والبقاء!
+      في قلب الإمبراطورية، حيث ترتفع جدران الكولوسيوم شاهقةً فوق صرخات الجماهير، يقف «لوسيوس فارو» على مرمى حجر من خلاصه.<br>
+      قِفْ ثابتًا، صدّ وابطش، فهذه الساحة لا ترحم المتخاذلين؛ النصر فيها يُكتب بالذهب والدم.<br>
+      هل ستستعيد شرفك أم تُدفن تحت ركام الهزيمة؟ القرار لك... والوقت يداهمك!
     </p>
 
     <!-- زر تحميل PDF -->
     <div style="text-align: center; margin: 30px 0;">
-      <a href="ame Title The Payday Arena.pdf" download class="download-btn">
+      <a href="game-title-The-Payday-Arena.pdf" download class="download-btn">
         📄 تحميل ملف تفاصيل اللعبة | Download Game Design Document (PDF)
       </a>
     </div>
@@ -226,6 +230,7 @@
       <img src="Screenshot 2025-06-18 193013.png" alt="صورة 1">
       <img src="Screenshot 2025-06-18 192934.png" alt="صورة 2">
       <img src="Screenshot 2025-06-18 192629.png" alt="صورة 3">
+      <img src="Screenshot 2025-06-18 192700.png" alt="صورة 4">
     </div>
 
     <h2>تعلم التحكم | Controls Guide</h2>
@@ -234,7 +239,6 @@
       <div class="control-card"><h3>الهجوم الخفيف | Light Attack</h3><p>زر الماوس الأيسر</p></div>
       <div class="control-card"><h3>الهجوم الثقيل | Heavy Attack</h3><p>اضغط مع الاستمرار على الماوس</p></div>
       <div class="control-card"><h3>الدفاع | Defense</h3><p>زر الماوس الأيمن</p></div>
-      <div class="control-card"><h3>التفادي | Dodge Roll</h3><p>المسافة (Spacebar)</p></div>
       <div class="control-card"><h3>التفاعل | Interaction</h3><p>اضغط E لالتقاط السلاح</p></div>
     </div>
 
