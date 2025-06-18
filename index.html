@@ -1,15 +1,16 @@
+
 <!-- يبدأ هنا -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' GLS/95.10.2559.60';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
   <title>فريق العمل | The Payday Arena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-blue: #2d6fa7;
-      --imperial-gold: #d4af37;
+      --imperial-gold: #b8860b;
       --glass-bg: rgba(255, 255, 255, 0.12);
       --glass-border: rgba(255, 255, 255, 0.2);
       --text-dark: #112;
@@ -32,6 +33,7 @@
     }
 
     h1 {
+      font-family: 'Cinzel', serif;
       text-align: center;
       font-size: 46px;
       color: var(--imperial-gold);
@@ -39,21 +41,25 @@
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
     }
 
+    /* غيّرنا لون عناوين H2 للذهبي الإمبراطوري */
     h2 {
+      font-family: 'Cinzel', serif;
       text-align: center;
       font-size: 26px;
       margin: 30px 0 15px;
-      color: #155b84;
+      color: var(--imperial-gold);
     }
 
     .description {
+      font-family: 'Cinzel', serif;
+      border: 2px solid var(--imperial-gold);
       max-width: 900px;
       margin: 0 auto 30px;
       text-align: center;
       font-size: 18px;
       line-height: 1.8;
       color: var(--imperial-gold);
-      background: rgba(255,255,255,0.3);
+      background: transparent;
       padding: 16px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -75,12 +81,14 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     }
 
+    /* زر التحميل: خلفية شفافة وحدود ذهبية */
     .download-btn {
-      background: linear-gradient(to right, #1c6ea4, #2d6fa7);
-      color: white;
+      background: transparent;
+      color: var(--imperial-gold);
       padding: 14px 28px;
       font-size: 16px;
       border-radius: 30px;
+      border: 2px solid var(--imperial-gold);
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -89,7 +97,8 @@
     }
 
     .download-btn:hover {
-      background: linear-gradient(to right, #144e75, #1c6ea4);
+      background: var(--imperial-gold);
+      color: #000;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
       transform: translateY(-2px);
     }
@@ -124,8 +133,8 @@
     }
 
     .card {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
+      background: transparent;
+      border: 2px solid var(--imperial-gold);
       backdrop-filter: blur(12px);
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -143,6 +152,8 @@
 
     .name { font-size: 20px; font-weight: bold; margin-top: 10px; color: #003355; }
     .job { font-size: 15px; color: #333; margin: 5px 0; }
+
+    /* غيرنا ألوان أرقام الجوال والإيميل للذهبي */
     .phone { font-size: 15px; color: var(--primary-blue); margin: 5px 0; }
     .email a { font-size: 15px; color: var(--primary-blue); text-decoration: none; }
     .email a:hover { text-decoration: underline; }
@@ -175,8 +186,8 @@
     }
 
     .control-card {
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      border: 2px solid var(--imperial-gold);
       backdrop-filter: blur(8px);
       border-radius: 16px;
       padding: 16px;
@@ -186,7 +197,7 @@
 
     .control-card h3 {
       font-size: 18px;
-      color: #0b3e65;
+      color: #000;
       margin-bottom: 8px;
     }
 
@@ -197,9 +208,13 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 36px; }
-      h2 { font-size: 22px; }
-      .description { font-size: 16px; }
+      h1 {
+      font-family: 'Cinzel', serif; font-size: 36px; }
+      h2 {
+      font-family: 'Cinzel', serif; font-size: 22px; }
+      .description {
+      font-family: 'Cinzel', serif;
+      border: 2px solid var(--imperial-gold); font-size: 16px; }
     }
   </style>
 </head>
@@ -257,10 +272,10 @@
 
       <div class="card">
         <img src="sami.jpg" alt="Sami">
-        <div class="name">سامي | Sami</div>
-        <div class="job">Game Design + Sound</div>
-        <div class="phone">0502345678</div>
-        <div class="email"><a href="mailto:sami@example.com">sami@example.com</a></div>
+        <div class="name">سامي العضياني | Sami Alodyani</div>
+        <div class="job">Game Design + Sound + UI</div>
+        <div class="phone">0509400546</div>
+        <div class="email"><a href="mailto:Alodyani.sami@gmail.com">Alodyani.sami@gmail.com</a></div>
         <div class="links">
           <a href="https://www.linkedin.com/in/sami-alotaibi-614636273" target="_blank">LinkedIn</a>
           <a href="https://sami.itch.io" target="_blank">itch.io</a>
