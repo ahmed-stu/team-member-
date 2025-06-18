@@ -33,9 +33,35 @@
 
     h2 {
       text-align: center;
-      font-size: 20px;
+      font-size: 24px;
+      color: #222;
+      margin: 30px 0 20px;
+    }
+
+    .description {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
       color: #444;
-      margin-bottom: 40px;
+      line-height: 1.7;
+      margin-bottom: 50px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .team-container {
@@ -119,20 +145,31 @@
 <body>
   <div class="overlay">
     <h1>The Payday Arena</h1>
-    <h2>فريق العمل | Team Members</h2>
+    <h2>وصف اللعبة</h2>
+    <p class="description">
+      The Payday Arena هي لعبة أكشن تكتيكية ثلاثية الأبعاد تدور أحداثها في ساحة معارك داخل بنك محصّن. يتحكم اللاعب في فريق من الشخصيات، لكل منها قدرات خاصة، في مواجهة موجات من الأعداء. تعتمد اللعبة على استراتيجيات ذكية، وتفاعل بين الشخصيات، مع تصميم ثلاثي الأبعاد دقيق وذكاء اصطناعي متطور للعدو.
+    </p>
 
+    <h2>صور من اللعبة</h2>
+    <div class="gallery">
+      <img src="game1.jpg" alt="Game Screenshot 1">
+      <img src="game2.jpg" alt="Game Screenshot 2">
+      <img src="game3.jpg" alt="Game Screenshot 3">
+    </div>
+
+    <h2>فريق العمل</h2>
     <div class="team-container">
 
       <!-- أحمد -->
       <div class="card">
         <img src="Ahmed.jpg" alt="Ahmed">
         <div class="name">أحمد سلامة | Ahmed Salama</div>
-        <div class="job">تصميم الخرائط | Map Design</div>
-        <div class="phone">رقم الجوال: 0501234567</div>
-        <div class="email">البريد: <a href="mailto:ahmed@example.com">ahmed@example.com</a></div>
+        <div class="job">النمذجة ثلاثية الأبعاد + التحريك | 3D Modeling + Animation</div>
+        <div class="phone">رقم الجوال: 0501563803</div>
+        <div class="email">البريد: <a href="mailto:hrbe250@gmail.com">hrbe250@gmail.com</a></div>
         <div class="links">
-          <a href="https://www.linkedin.com/in/ahmed" target="_blank">LinkedIn</a>
-          <a href="https://ahmed.itch.io" target="_blank">itch.io</a>
+          <a href="https://www.linkedin.com/in/ahmd-hrbe-9533a021b" target="_blank">LinkedIn</a>
+          <a href="https://ahmed-stu.itch.io" target="_blank">itch.io</a>
         </div>
       </div>
 
@@ -140,11 +177,11 @@
       <div class="card">
         <img src="sami.jpg" alt="Sami">
         <div class="name">سامي | Sami</div>
-        <div class="job">تصميم غرفة اللاعب | Player Room Design</div>
+        <div class="job">تصميم اللعبة | Game Design</div>
         <div class="phone">رقم الجوال: 0502345678</div>
         <div class="email">البريد: <a href="mailto:sami@example.com">sami@example.com</a></div>
         <div class="links">
-          <a href="https://www.linkedin.com/in/sami" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sami-alotaibi-614636273" target="_blank">LinkedIn</a>
           <a href="https://sami.itch.io" target="_blank">itch.io</a>
         </div>
       </div>
@@ -153,7 +190,7 @@
       <div class="card">
         <img src="fahad.jpg" alt="Fahad">
         <div class="name">فهد | Fahad</div>
-        <div class="job">ميكانيك اللاعب | Player Mechanics</div>
+        <div class="job">نمذجة اللاعب + ميكانيك اللاعب | Player Modeling + Mechanics</div>
         <div class="phone">رقم الجوال: 0503456789</div>
         <div class="email">البريد: <a href="mailto:fahad@example.com">fahad@example.com</a></div>
         <div class="links">
@@ -166,7 +203,7 @@
       <div class="card">
         <img src="abdulsalam.jpg" alt="Abdul Salam">
         <div class="name">عبد السلام | Abdulsalam</div>
-        <div class="job">ميكانيك العدو | Enemy Mechanics</div>
+        <div class="job">ميكانيك العدو + ذكاء العدو الاصطناعي | Enemy Mechanics + Enemy AI</div>
         <div class="phone">رقم الجوال: 0504567890</div>
         <div class="email">البريد: <a href="mailto:abdulsalam@example.com">abdulsalam@example.com</a></div>
         <div class="links">
