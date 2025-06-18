@@ -25,7 +25,6 @@
     .overlay {
       background-color: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
       min-height: 100vh;
       padding: 40px 16px;
     }
@@ -109,12 +108,12 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       text-align: center;
       overflow: hidden;
-      padding-bottom: 20px;
+      padding: 16px;
       transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
     }
 
     .card img {
@@ -123,32 +122,10 @@
       object-fit: cover;
     }
 
-    .name {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 12px;
-      color: #003355;
-    }
-
-    .job {
-      font-size: 15px;
-      margin: 6px 0;
-      color: #333;
-    }
-
-    .phone, .email {
-      font-size: 14px;
-      color: #444;
-    }
-
-    .email a {
-      color: #1c6ea4;
-      text-decoration: none;
-    }
-
-    .email a:hover {
-      text-decoration: underline;
-    }
+    .name { font-size: 20px; font-weight: bold; margin-top: 10px; color: #003355; }
+    .job, .phone, .email { font-size: 15px; color: #333; margin: 5px 0; }
+    .email a { color: #1c6ea4; text-decoration: none; }
+    .email a:hover { text-decoration: underline; }
 
     .links {
       margin-top: 8px;
@@ -169,8 +146,34 @@
       background: linear-gradient(to right, #e74c3c, #c0392b);
     }
 
-    .links a:hover {
-      opacity: 0.85;
+    .controls-container {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .control-card {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .control-card h3 {
+      font-size: 18px;
+      color: #0b3e65;
+      margin-bottom: 8px;
+    }
+
+    .control-card p {
+      font-size: 14px;
+      color: #222;
+      line-height: 1.6;
     }
 
     @media (max-width: 600px) {
@@ -183,21 +186,22 @@
 <body>
   <div class="overlay">
 
-    <!-- بوستر -->
+    <!-- Poster -->
     <div class="hero">
       <img src="THE PAY DAY ARERNA png.png" alt="بوستر اللعبة" class="hero-img">
     </div>
 
-    <!-- عنوان -->
     <h1>The Payday Arena</h1>
 
     <!-- وصف اللعبة -->
     <h2>وصف اللعبة</h2>
     <p class="description">
-      The Payday Arena هي لعبة أكشن قتالية تكتيكية 1v1 داخل ساحة رومانية. اللاعب يتقمص دور "لوسيوس فارو"، جندي روماني فقد شرفه ويقاتل من أجل حريته ضد زعماء أقوياء. تتغير الأسلحة مع كل جولة، ويزداد التحدي، والجمهور يصيح... أنت تحارب لتعيش، أو تُنسى!
+      في ساحة رومانية مليئة بالصراع والدم، يخوض البطل "لوسيوس فارو" نزالاً من أجل استعادة شرفه.  
+      قاتل ضد زعماء، راوغ ضرباتهم، وكن آخر من يبقى واقفًا.  
+      The Payday Arena ليست مجرد لعبة، إنها ساحة اختبار للكرامة، المهارة، والبقاء!
     </p>
 
-    <!-- صور اللعبة -->
+    <!-- صور من اللعبة -->
     <h2>صور من اللعبة</h2>
     <div class="gallery">
       <img src="Screenshot 2025-06-18 193013.png" alt="صورة 1">
@@ -205,10 +209,38 @@
       <img src="Screenshot 2025-06-18 192629.png" alt="صورة 3">
     </div>
 
-    <!-- الفريق -->
+    <!-- تعلم التحكم -->
+    <h2>تعلم التحكم | Controls Guide</h2>
+    <div class="controls-container">
+      <div class="control-card">
+        <h3>الحركة | Movement</h3>
+        <p>WASD لتحريك الشخصية في الاتجاهات الأربعة</p>
+      </div>
+      <div class="control-card">
+        <h3>الهجوم الخفيف | Light Attack</h3>
+        <p>اضغط زر الماوس الأيسر</p>
+      </div>
+      <div class="control-card">
+        <h3>الهجوم الثقيل | Heavy Attack</h3>
+        <p>اضغط مع الاستمرار زر الماوس الأيسر</p>
+      </div>
+      <div class="control-card">
+        <h3>الدفاع | Defense</h3>
+        <p>زر الماوس الأيمن للتصدي للهجمات</p>
+      </div>
+      <div class="control-card">
+        <h3>التفادي | Dodge Roll</h3>
+        <p>اضغط على زر المسافة (Spacebar)</p>
+      </div>
+      <div class="control-card">
+        <h3>التفاعل | Interaction</h3>
+        <p>اضغط E لالتقاط الأسلحة من الأرض</p>
+      </div>
+    </div>
+
+    <!-- فريق العمل -->
     <h2>فريق العمل</h2>
     <div class="team-container">
-
       <!-- أحمد -->
       <div class="card">
         <img src="Ahmed.jpg" alt="Ahmed">
@@ -260,7 +292,6 @@
           <a href="https://abdulsalam.itch.io" target="_blank">itch.io</a>
         </div>
       </div>
-
     </div>
   </div>
 </body>
