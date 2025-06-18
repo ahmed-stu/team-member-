@@ -8,46 +8,40 @@
   <style>
     :root {
       --primary-blue: #2d6fa7;
-      --light-blue: #e6f2fc;
-      --glass-bg: rgba(255, 255, 255, 0.15);
+      --glass-bg: rgba(255, 255, 255, 0.12);
       --glass-border: rgba(255, 255, 255, 0.2);
-      --text-color: #0a2233;
+      --text-dark: #112;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Amiri', 'Cinzel', serif;
       background: url('Screenshot 2025-06-15 174644.png') no-repeat center center/cover fixed;
       direction: rtl;
-      color: var(--text-color);
+      color: var(--text-dark);
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(10px) saturate(150%);
-      -webkit-backdrop-filter: blur(10px) saturate(150%);
+      background-color: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       min-height: 100vh;
       padding: 40px 16px;
     }
 
     h1 {
       text-align: center;
-      font-size: 48px;
-      margin-bottom: 20px;
+      font-size: 46px;
       color: var(--primary-blue);
-      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
 
     h2 {
       text-align: center;
-      font-size: 28px;
-      margin: 32px 0 16px;
-      color: #144e75;
+      font-size: 26px;
+      margin: 30px 0 15px;
+      color: #155b84;
     }
 
     .description {
@@ -61,6 +55,21 @@
       padding: 16px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     }
 
     .gallery {
@@ -93,32 +102,19 @@
     }
 
     .card {
-      position: relative;
       background: var(--glass-bg);
-      border-radius: 20px;
-      backdrop-filter: blur(12px) saturate(160%);
-      -webkit-backdrop-filter: blur(12px) saturate(160%);
       border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
+      overflow: hidden;
       padding-bottom: 20px;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent);
-      z-index: 1;
-      pointer-events: none;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
     }
 
     .card img {
@@ -127,28 +123,22 @@
       object-fit: cover;
     }
 
-    .name, .job, .phone, .email {
-      position: relative;
-      z-index: 2;
-    }
-
     .name {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: bold;
-      margin: 12px 0 6px;
-      color: #083c61;
+      margin-top: 12px;
+      color: #003355;
     }
 
     .job {
       font-size: 15px;
+      margin: 6px 0;
       color: #333;
-      margin-bottom: 8px;
     }
 
     .phone, .email {
       font-size: 14px;
       color: #444;
-      margin-bottom: 6px;
     }
 
     .email a {
@@ -161,20 +151,18 @@
     }
 
     .links {
-      position: relative;
-      z-index: 2;
+      margin-top: 8px;
     }
 
     .links a {
       display: inline-block;
-      margin: 5px 8px;
-      padding: 6px 14px;
+      margin: 4px;
+      padding: 6px 12px;
       font-size: 13px;
-      text-decoration: none;
       border-radius: 20px;
-      color: white;
+      color: #fff;
+      text-decoration: none;
       background: linear-gradient(to right, #2d6fa7, #418fc4);
-      transition: opacity 0.2s;
     }
 
     .links a:nth-child(2) {
@@ -185,31 +173,9 @@
       opacity: 0.85;
     }
 
-    .hero {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: auto;
-      max-height: 500px;
-      object-fit: contain;
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    }
-
-    .hero-desc {
-      margin-top: 24px;
-      font-size: 20px;
-      color: #222;
-      line-height: 1.8;
-    }
-
     @media (max-width: 600px) {
-      h1 { font-size: 38px; }
-      h2 { font-size: 24px; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 22px; }
       .description { font-size: 16px; }
     }
   </style>
@@ -217,31 +183,37 @@
 <body>
   <div class="overlay">
 
+    <!-- بوستر -->
     <div class="hero">
-      <img src="THE PAY DAY ARERNA png.png" alt="البوستر" class="hero-img">
+      <img src="THE PAY DAY ARERNA png.png" alt="بوستر اللعبة" class="hero-img">
     </div>
 
+    <!-- عنوان -->
     <h1>The Payday Arena</h1>
 
+    <!-- وصف اللعبة -->
     <h2>وصف اللعبة</h2>
     <p class="description">
-      The Payday Arena هي لعبة أكشن استراتيجية تدور داخل بنك محصّن، يواجه اللاعب فيها موجات من الأعداء باستخدام شخصيات بقدرات متنوعة. يتطلب النجاح تنسيق تكتيكي وسرعة بديهة داخل ساحة معركة واقعية ثلاثية الأبعاد.
+      The Payday Arena هي لعبة أكشن قتالية تكتيكية 1v1 داخل ساحة رومانية. اللاعب يتقمص دور "لوسيوس فارو"، جندي روماني فقد شرفه ويقاتل من أجل حريته ضد زعماء أقوياء. تتغير الأسلحة مع كل جولة، ويزداد التحدي، والجمهور يصيح... أنت تحارب لتعيش، أو تُنسى!
     </p>
 
+    <!-- صور اللعبة -->
     <h2>صور من اللعبة</h2>
     <div class="gallery">
-      <img src="Screenshot 2025-06-18 193013.png" alt="صورة اللعبة 1">
-      <img src="Screenshot 2025-06-18 192934.png" alt="صورة اللعبة 2">
-      <img src="Screenshot 2025-06-18 192629.png" alt="صورة اللعبة 3">
+      <img src="Screenshot 2025-06-18 193013.png" alt="صورة 1">
+      <img src="Screenshot 2025-06-18 192934.png" alt="صورة 2">
+      <img src="Screenshot 2025-06-18 192629.png" alt="صورة 3">
     </div>
 
+    <!-- الفريق -->
     <h2>فريق العمل</h2>
     <div class="team-container">
 
+      <!-- أحمد -->
       <div class="card">
         <img src="Ahmed.jpg" alt="Ahmed">
         <div class="name">أحمد سلامة | Ahmed Salama</div>
-        <div class="job">النمذجة ثلاثية الأبعاد + التحريك</div>
+        <div class="job">التحريك وتصميم اللعبة | Animation & Game Design</div>
         <div class="phone">0501563803</div>
         <div class="email"><a href="mailto:hrbe250@gmail.com">hrbe250@gmail.com</a></div>
         <div class="links">
@@ -250,10 +222,11 @@
         </div>
       </div>
 
+      <!-- سامي -->
       <div class="card">
         <img src="sami.jpg" alt="Sami">
         <div class="name">سامي | Sami</div>
-        <div class="job">تصميم اللعبة</div>
+        <div class="job">المؤثرات البصرية والجزيئات | VFX & Particles</div>
         <div class="phone">0502345678</div>
         <div class="email"><a href="mailto:sami@example.com">sami@example.com</a></div>
         <div class="links">
@@ -262,10 +235,11 @@
         </div>
       </div>
 
+      <!-- فهد -->
       <div class="card">
         <img src="fahad.jpg" alt="Fahad">
         <div class="name">فهد | Fahad</div>
-        <div class="job">نمذجة اللاعب + ميكانيك اللاعب</div>
+        <div class="job">ميكانيك اللاعب | Player Mechanics</div>
         <div class="phone">0503456789</div>
         <div class="email"><a href="mailto:fahad@example.com">fahad@example.com</a></div>
         <div class="links">
@@ -274,10 +248,11 @@
         </div>
       </div>
 
+      <!-- عبدالسلام -->
       <div class="card">
         <img src="abdulsalam.jpg" alt="Abdulsalam">
-        <div class="name">عبد السلام | Abdulsalam</div>
-        <div class="job">ميكانيك العدو + الذكاء الاصطناعي</div>
+        <div class="name">عبدالسلام | Abdulsalam</div>
+        <div class="job">تصميم الأعداء + الذكاء الاصطناعي | Enemy Design & AI</div>
         <div class="phone">0504567890</div>
         <div class="email"><a href="mailto:abdulsalam@example.com">abdulsalam@example.com</a></div>
         <div class="links">
