@@ -7,11 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-dark: #7a2d2d;
-      --primary-gold: #c9a646;
-      --primary-light: #d4b483;
-      --glass-bg: rgba(0, 0, 0, 0.55);
-      --glass-border: rgba(255, 255, 255, 0.1);
+      --primary-blue: #2d6fa7;
+      --light-blue: #e6f2fc;
+      --glass-bg: rgba(255, 255, 255, 0.25);
+      --glass-border: rgba(255, 255, 255, 0.15);
     }
 
     * { box-sizing: border-box; }
@@ -19,50 +18,29 @@
     body {
       margin: 0;
       font-family: 'Amiri', 'Cinzel', serif;
-      background: url('Screenshot 2025-06-15 174644.png') no-repeat center center/cover fixed;
+      background: url('roman_bg.jpg') no-repeat center center/cover fixed;
       direction: rtl;
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(2px);
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
       min-height: 100vh;
       padding: 40px 16px;
-    }
-
-    .hero {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    .hero-img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-    }
-
-    .hero-desc {
-      margin-top: 24px;
-      font-size: 20px;
-      color: #222;
-      line-height: 1.8;
     }
 
     h1 {
       text-align: center;
       font-size: 48px;
-      margin-bottom: 10px;
-      color: var(--primary-dark);
+      margin-bottom: 20px;
+      color: var(--primary-blue);
     }
 
     h2 {
       text-align: center;
       font-size: 28px;
-      margin: 32px 0 20px;
-      color: #222;
+      margin: 32px 0 16px;
+      color: #144e75;
     }
 
     .description {
@@ -71,7 +49,7 @@
       text-align: center;
       font-size: 18px;
       line-height: 1.8;
-      color: #333;
+      color: #222;
     }
 
     .gallery {
@@ -87,7 +65,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform 0.3s ease;
     }
 
@@ -108,7 +86,7 @@
       border-radius: 20px;
       backdrop-filter: blur(10px);
       border: 1px solid var(--glass-border);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
@@ -117,7 +95,7 @@
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
     }
 
     .card img {
@@ -130,23 +108,23 @@
       font-size: 21px;
       font-weight: bold;
       margin: 12px 0 6px;
-      color: #fff;
+      color: #083c61;
     }
 
     .job {
       font-size: 15px;
-      color: #ddd;
+      color: #444;
       margin-bottom: 8px;
     }
 
     .phone, .email {
       font-size: 14px;
-      color: #bbb;
+      color: #555;
       margin-bottom: 6px;
     }
 
     .email a {
-      color: var(--primary-light);
+      color: #1c6ea4;
       text-decoration: none;
     }
 
@@ -162,7 +140,7 @@
       text-decoration: none;
       border-radius: 20px;
       color: white;
-      background: linear-gradient(to right, var(--primary-gold), var(--primary-dark));
+      background: linear-gradient(to right, #2d6fa7, #418fc4);
       transition: opacity 0.2s;
     }
 
@@ -174,6 +152,27 @@
       opacity: 0.85;
     }
 
+    .hero {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .hero-desc {
+      margin-top: 24px;
+      font-size: 20px;
+      color: #222;
+      line-height: 1.8;
+    }
+
     @media (max-width: 600px) {
       h1 { font-size: 38px; }
       h2 { font-size: 24px; }
@@ -182,23 +181,24 @@
 </head>
 <body>
   <div class="overlay">
+
     <div class="hero">
-      <img src="hero-placeholder.jpg" alt="صورة الغلاف" class="hero-img">
-      <p class="hero-desc">هنا وصف موجز للمشروع يمكن تعديله لاحقًا حسب الحاجة.</p>
+      <img src="poster.jpg" alt="البوستر (قريبًا)" class="hero-img">
+      <p class="hero-desc">مقدمة عن اللعبة أو عرض تشويقي للمشروع – يمكن استبدال هذه الفقرة لاحقًا.</p>
     </div>
 
     <h1>The Payday Arena</h1>
 
     <h2>وصف اللعبة</h2>
     <p class="description">
-      The Payday Arena هي لعبة أكشن تكتيكية ثلاثية الأبعاد تدور أحداثها في ساحة معركة داخل بنك محصّن. يتحكم اللاعب في فريق من الشخصيات ذات قدرات مختلفة، ويواجه موجات من الأعداء باستخدام استراتيجيات ذكية وتنسيق فعال بين الفريق.
+      The Payday Arena هي لعبة أكشن استراتيجية تدور داخل بنك محصّن، يواجه اللاعب فيها موجات من الأعداء باستخدام شخصيات بقدرات متنوعة. يتطلب النجاح تنسيق تكتيكي وسرعة بديهة داخل ساحة معركة واقعية ثلاثية الأبعاد.
     </p>
 
     <h2>صور من اللعبة</h2>
     <div class="gallery">
-      <img src="game1.jpg" alt="Game Screenshot 1">
-      <img src="game2.jpg" alt="Game Screenshot 2">
-      <img src="game3.jpg" alt="Game Screenshot 3">
+      <img src="Screenshot 2025-06-18 193013.png" alt="صورة اللعبة 1">
+      <img src="Screenshot 2025-06-18 192934.png" alt="صورة اللعبة 2">
+      <img src="Screenshot 2025-06-18 192629.png" alt="صورة اللعبة 3">
     </div>
 
     <h2>فريق العمل</h2>
@@ -208,9 +208,9 @@
       <div class="card">
         <img src="Ahmed.jpg" alt="Ahmed">
         <div class="name">أحمد سلامة | Ahmed Salama</div>
-        <div class="job">النمذجة ثلاثية الأبعاد + التحريك<br>3D Modeling + Animation</div>
+        <div class="job">النمذجة ثلاثية الأبعاد + التحريك</div>
         <div class="phone">0501563803</div>
-        <div class="email">hrbe250@gmail.com</div>
+        <div class="email"><a href="mailto:hrbe250@gmail.com">hrbe250@gmail.com</a></div>
         <div class="links">
           <a href="https://www.linkedin.com/in/ahmd-hrbe-9533a021b" target="_blank">LinkedIn</a>
           <a href="https://ahmed-stu.itch.io" target="_blank">itch.io</a>
@@ -221,9 +221,9 @@
       <div class="card">
         <img src="sami.jpg" alt="Sami">
         <div class="name">سامي | Sami</div>
-        <div class="job">تصميم اللعبة<br>Game Design</div>
+        <div class="job">تصميم اللعبة</div>
         <div class="phone">0502345678</div>
-        <div class="email">sami@example.com</div>
+        <div class="email"><a href="mailto:sami@example.com">sami@example.com</a></div>
         <div class="links">
           <a href="https://www.linkedin.com/in/sami-alotaibi-614636273" target="_blank">LinkedIn</a>
           <a href="https://sami.itch.io" target="_blank">itch.io</a>
@@ -234,9 +234,9 @@
       <div class="card">
         <img src="fahad.jpg" alt="Fahad">
         <div class="name">فهد | Fahad</div>
-        <div class="job">نمذجة اللاعب + ميكانيك اللاعب<br>Player Modeling + Mechanics</div>
+        <div class="job">نمذجة اللاعب + ميكانيك اللاعب</div>
         <div class="phone">0503456789</div>
-        <div class="email">fahad@example.com</div>
+        <div class="email"><a href="mailto:fahad@example.com">fahad@example.com</a></div>
         <div class="links">
           <a href="https://www.linkedin.com/in/fahad" target="_blank">LinkedIn</a>
           <a href="https://fahad.itch.io" target="_blank">itch.io</a>
@@ -247,9 +247,9 @@
       <div class="card">
         <img src="abdulsalam.jpg" alt="Abdulsalam">
         <div class="name">عبد السلام | Abdulsalam</div>
-        <div class="job">ميكانيك العدو + الذكاء الاصطناعي<br>Enemy Mechanics + AI</div>
+        <div class="job">ميكانيك العدو + الذكاء الاصطناعي</div>
         <div class="phone">0504567890</div>
-        <div class="email">abdulsalam@example.com</div>
+        <div class="email"><a href="mailto:abdulsalam@example.com">abdulsalam@example.com</a></div>
         <div class="links">
           <a href="https://www.linkedin.com/in/abdulsalam" target="_blank">LinkedIn</a>
           <a href="https://abdulsalam.itch.io" target="_blank">itch.io</a>
