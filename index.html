@@ -23,8 +23,8 @@
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
       min-height: 100vh;
       padding: 40px 16px;
     }
@@ -45,7 +45,7 @@
 
     .description {
       max-width: 900px;
-      margin: 0 auto 50px;
+      margin: 0 auto 30px;
       text-align: center;
       font-size: 18px;
       line-height: 1.8;
@@ -69,6 +69,25 @@
       object-fit: contain;
       border-radius: 20px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .download-btn {
+      background: linear-gradient(to right, #1c6ea4, #2d6fa7);
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(to right, #144e75, #1c6ea4);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
     }
 
     .gallery {
@@ -109,17 +128,13 @@
       text-align: center;
       overflow: hidden;
       padding: 16px;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
     }
 
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
+      border-radius: 10px;
     }
 
     .name { font-size: 20px; font-weight: bold; margin-top: 10px; color: #003355; }
@@ -186,14 +201,12 @@
 <body>
   <div class="overlay">
 
-    <!-- Poster -->
     <div class="hero">
       <img src="THE PAY DAY ARERNA png.png" alt="بوستر اللعبة" class="hero-img">
     </div>
 
     <h1>The Payday Arena</h1>
 
-    <!-- وصف اللعبة -->
     <h2>وصف اللعبة</h2>
     <p class="description">
       في ساحة رومانية مليئة بالصراع والدم، يخوض البطل "لوسيوس فارو" نزالاً من أجل استعادة شرفه.  
@@ -201,7 +214,13 @@
       The Payday Arena ليست مجرد لعبة، إنها ساحة اختبار للكرامة، المهارة، والبقاء!
     </p>
 
-    <!-- صور من اللعبة -->
+    <!-- زر تحميل PDF -->
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="The_Payday_Arena_Game_Design.pdf" download class="download-btn">
+        📄 تحميل ملف تفاصيل اللعبة (PDF)
+      </a>
+    </div>
+
     <h2>صور من اللعبة</h2>
     <div class="gallery">
       <img src="Screenshot 2025-06-18 193013.png" alt="صورة 1">
@@ -209,39 +228,18 @@
       <img src="Screenshot 2025-06-18 192629.png" alt="صورة 3">
     </div>
 
-    <!-- تعلم التحكم -->
     <h2>تعلم التحكم | Controls Guide</h2>
     <div class="controls-container">
-      <div class="control-card">
-        <h3>الحركة | Movement</h3>
-        <p>WASD لتحريك الشخصية في الاتجاهات الأربعة</p>
-      </div>
-      <div class="control-card">
-        <h3>الهجوم الخفيف | Light Attack</h3>
-        <p>اضغط زر الماوس الأيسر</p>
-      </div>
-      <div class="control-card">
-        <h3>الهجوم الثقيل | Heavy Attack</h3>
-        <p>اضغط مع الاستمرار زر الماوس الأيسر</p>
-      </div>
-      <div class="control-card">
-        <h3>الدفاع | Defense</h3>
-        <p>زر الماوس الأيمن للتصدي للهجمات</p>
-      </div>
-      <div class="control-card">
-        <h3>التفادي | Dodge Roll</h3>
-        <p>اضغط على زر المسافة (Spacebar)</p>
-      </div>
-      <div class="control-card">
-        <h3>التفاعل | Interaction</h3>
-        <p>اضغط E لالتقاط الأسلحة من الأرض</p>
-      </div>
+      <div class="control-card"><h3>الحركة | Movement</h3><p>WASD لتحريك الشخصية</p></div>
+      <div class="control-card"><h3>الهجوم الخفيف | Light Attack</h3><p>زر الماوس الأيسر</p></div>
+      <div class="control-card"><h3>الهجوم الثقيل | Heavy Attack</h3><p>اضغط مع الاستمرار على الماوس</p></div>
+      <div class="control-card"><h3>الدفاع | Defense</h3><p>زر الماوس الأيمن</p></div>
+      <div class="control-card"><h3>التفادي | Dodge Roll</h3><p>المسافة (Spacebar)</p></div>
+      <div class="control-card"><h3>التفاعل | Interaction</h3><p>اضغط E لالتقاط السلاح</p></div>
     </div>
 
-    <!-- فريق العمل -->
     <h2>فريق العمل</h2>
     <div class="team-container">
-      <!-- أحمد -->
       <div class="card">
         <img src="Ahmed.jpg" alt="Ahmed">
         <div class="name">أحمد سلامة | Ahmed Salama</div>
@@ -254,7 +252,6 @@
         </div>
       </div>
 
-      <!-- سامي -->
       <div class="card">
         <img src="sami.jpg" alt="Sami">
         <div class="name">سامي | Sami</div>
@@ -267,7 +264,6 @@
         </div>
       </div>
 
-      <!-- فهد -->
       <div class="card">
         <img src="fahad.jpg" alt="Fahad">
         <div class="name">فهد | Fahad</div>
@@ -280,11 +276,10 @@
         </div>
       </div>
 
-      <!-- عبدالسلام -->
       <div class="card">
         <img src="abdulsalam.jpg" alt="Abdulsalam">
         <div class="name">عبدالسلام | Abdulsalam</div>
-        <div class="job">تصميم الأعداء + الذكاء الاصطناعي | Enemy Design & AI</div>
+        <div class="job">تصميم الأعداء والذكاء الاصطناعي | Enemy Design & AI</div>
         <div class="phone">0504567890</div>
         <div class="email"><a href="mailto:abdulsalam@example.com">abdulsalam@example.com</a></div>
         <div class="links">
@@ -293,6 +288,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </body>
 </html>
