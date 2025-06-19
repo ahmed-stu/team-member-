@@ -1,9 +1,7 @@
-
-<!-- يبدأ هنا -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' GLS/95.10.2559.60';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>فريق العمل | The Payday Arena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
@@ -11,12 +9,14 @@
     :root {
       --primary-blue: #2d6fa7;
       --imperial-gold: #b8860b;
-      --glass-bg: rgba(255, 255, 255, 0.12);
-      --glass-border: rgba(255, 255, 255, 0.2);
-      --text-dark: #112;
+      --text-dark: #000;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Amiri', 'Cinzel', serif;
@@ -26,44 +26,33 @@
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(8px);
       min-height: 100vh;
       padding: 40px 16px;
     }
 
-    h1 {
-      font-family: 'Cinzel', serif;
+    h1, h2 {
       text-align: center;
-      font-size: 46px;
       color: var(--imperial-gold);
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-family: 'Cinzel', serif;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
 
-    /* غيّرنا لون عناوين H2 للذهبي الإمبراطوري */
-    h2 {
-      font-family: 'Cinzel', serif;
-      text-align: center;
-      font-size: 26px;
-      margin: 30px 0 15px;
-      color: var(--imperial-gold);
-    }
+    h1 { font-size: 46px; margin-bottom: 20px; }
+    h2 { font-size: 26px; margin: 30px 0 15px; }
 
     .description {
-      font-family: 'Cinzel', serif;
-      border: 2px solid var(--imperial-gold);
       max-width: 900px;
       margin: 0 auto 30px;
       text-align: center;
       font-size: 18px;
       line-height: 1.8;
       color: var(--imperial-gold);
-      background: transparent;
+      border: 2px solid var(--imperial-gold);
       padding: 16px;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-shadow: 0 0 3px rgba(0,0,0,0.3);
+      background: transparent;
     }
 
     .hero {
@@ -74,14 +63,12 @@
 
     .hero-img {
       width: 100%;
-      height: auto;
       max-height: 500px;
       object-fit: contain;
       border-radius: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
     }
 
-    /* زر التحميل: خلفية شفافة وحدود ذهبية */
     .download-btn {
       background: transparent;
       color: var(--imperial-gold);
@@ -91,16 +78,14 @@
       border: 2px solid var(--imperial-gold);
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: all 0.3s ease;
       display: inline-block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .download-btn:hover {
       background: var(--imperial-gold);
       color: #000;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      transform: translateY(-2px);
     }
 
     .gallery {
@@ -116,12 +101,41 @@
       height: 200px;
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
+    }
+
+    .controls-container {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .control-card {
+      background: transparent;
+      border: 2px solid var(--imperial-gold);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .control-card h3 {
+      font-size: 18px;
+      color: var(--imperial-gold);
+      margin-bottom: 8px;
+    }
+
+    .control-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #eee;
     }
 
     .team-container {
@@ -135,12 +149,10 @@
     .card {
       background: transparent;
       border: 2px solid var(--imperial-gold);
-      backdrop-filter: blur(12px);
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       text-align: center;
-      overflow: hidden;
       padding: 16px;
+      color: #fff;
     }
 
     .card img {
@@ -150,20 +162,24 @@
       border-radius: 10px;
     }
 
-    .name { font-size: 20px; font-weight: bold; margin-top: 10px; color: #003355; }
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: var(--imperial-gold);
+    }
+
     .job {
-  font-size: 15px;
-  color: #000; /* <-- اللون الأسود */
-  margin: 5px 0;
-}
+      font-size: 15px;
+      color: #fff;
+      margin: 5px 0;
+    }
 
-    /* غيرنا ألوان أرقام الجوال والإيميل للذهبي */
-    .phone { font-size: 15px; color: var(--primary-blue); margin: 5px 0; }
-    .email a { font-size: 15px; color: var(--primary-blue); text-decoration: none; }
-    .email a:hover { text-decoration: underline; }
-
-    .links {
-      margin-top: 8px;
+    .phone, .email a {
+      font-size: 14px;
+      color: #ccc;
+      display: block;
+      margin: 5px 0;
     }
 
     .links a {
@@ -179,46 +195,6 @@
 
     .links a:nth-child(2) {
       background: linear-gradient(to right, #e74c3c, #c0392b);
-    }
-
-    .controls-container {
-      max-width: 900px;
-      margin: 0 auto 60px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .control-card {
-      background: transparent;
-      border: 2px solid var(--imperial-gold);
-      backdrop-filter: blur(8px);
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .control-card h3 {
-      font-size: 18px;
-      color: #000;
-      margin-bottom: 8px;
-    }
-
-    .control-card p {
-      font-size: 14px;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-      font-family: 'Cinzel', serif; font-size: 36px; }
-      h2 {
-      font-family: 'Cinzel', serif; font-size: 22px; }
-      .description {
-      font-family: 'Cinzel', serif;
-      border: 2px solid var(--imperial-gold); font-size: 16px; }
     }
   </style>
 </head>
@@ -238,7 +214,7 @@
     </p>
 
     <div style="text-align: center; margin: 30px 0;">
-      <a href="ame Title The Payday Arena.pdf" download class="download-btn">
+      <a href="game-title-The-Payday-Arena.pdf" download class="download-btn">
         📄 تحميل ملف تفاصيل اللعبة | Download Game Design Document (PDF)
       </a>
     </div>
@@ -253,64 +229,82 @@
 
     <h2>تعلم التحكم | Controls Guide</h2>
     <div class="controls-container">
-      <div class="control-card"><h3>الحركة | Movement</h3><p>WASD لتحريك الشخصية</p></div>
-      <div class="control-card"><h3>الهجوم الخفيف | Light Attack</h3><p>زر الماوس الأيسر</p></div>
-      <div class="control-card"><h3>الهجوم الثقيل | Heavy Attack</h3><p>اضغط مع الاستمرار على الماوس</p></div>
-      <div class="control-card"><h3>الدفاع | Defense</h3><p>زر الماوس الأيمن</p></div>
-      <div class="control-card"><h3>التفاعل | Interaction</h3><p>اضغط E لالتقاط السلاح</p></div>
+      <div class="control-card">
+        <h3>التحريك | Movement</h3>
+        <p>L3 - عصا التحكم اليسرى<br><strong>L3 - Left Stick</strong></p>
+      </div>
+      <div class="control-card">
+        <h3>تحريك الكاميرا | Camera</h3>
+        <p>R3 - عصا التحكم اليمنى<br><strong>R3 - Right Stick</strong></p>
+      </div>
+      <div class="control-card">
+        <h3>التصويب | Aim</h3>
+        <p>L2 - للتصويب<br><strong>L2 - Aim</strong></p>
+      </div>
+      <div class="control-card">
+        <h3>إلغاء التصويب | Cancel Aim</h3>
+        <p>L1 - إلغاء التصويب<br><strong>L1 - Cancel Aim</strong></p>
+      </div>
+      <div class="control-card">
+        <h3>الهجوم | Attack</h3>
+        <p>مربع - للهجوم<br><strong>Square - Attack</strong></p>
+      </div>
+      <div class="control-card">
+        <h3>الدفاع | Defense</h3>
+        <p>R1 - للدفاع<br><strong>R1 - Block</strong></p>
+      </div>
     </div>
 
-  <h2>فريق العمل</h2>
-<div class="team-container">
-  <div class="card">
-    <img src="Ahmed.jpg" alt="Ahmed">
-    <div class="name">أحمد سلامة | Ahmed Salama</div>
-    <div class="job">النمذجة ثلاثية الأبعاد، التحريك، الصوتيات<br><strong>3D Modeling, Animation, Sound</strong></div>
-    <div class="phone">0501563803</div>
-    <div class="email"><a href="mailto:hrbe250@gmail.com">hrbe250@gmail.com</a></div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/ahmd-hrbe-9533a021b" target="_blank">LinkedIn</a>
-      <a href="https://ahmed-stu.itch.io" target="_blank">itch.io</a>
+    <h2>فريق العمل</h2>
+    <div class="team-container">
+      <div class="card">
+        <img src="Ahmed.jpg" alt="Ahmed">
+        <div class="name">أحمد سلامة | Ahmed Salama</div>
+        <div class="job">النمذجة ثلاثية الأبعاد، التحريك، الصوتيات<br><strong>3D Modeling, Animation, Sound</strong></div>
+        <div class="phone">0501563803</div>
+        <div class="email"><a href="mailto:hrbe250@gmail.com">hrbe250@gmail.com</a></div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/ahmd-hrbe-9533a021b" target="_blank">LinkedIn</a>
+          <a href="https://ahmed-stu.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="samei.jpg" alt="Sami">
+        <div class="name">سامي العضياني | Sami Alodyani</div>
+        <div class="job">تصميم اللعبة، الصوتيات، الواجهة<br><strong>Game Design, Sound, UI</strong></div>
+        <div class="phone">0509400546</div>
+        <div class="email"><a href="mailto:Alodyani.sami@gmail.com">Alodyani.sami@gmail.com</a></div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/sami-alotaibi-614636273" target="_blank">LinkedIn</a>
+          <a href="https://sami179.itch.io" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="FAHAD.jpg" alt="Fahad">
+        <div class="name">فهد الحربي | Fahad Alharbi</div>
+        <div class="job">نمذجة اللاعب، ميكانيكا اللاعب<br><strong>Player Modeling, Mechanics</strong></div>
+        <div class="phone">+966535501339</div>
+        <div class="email"><a href="mailto:fahdalharbi321@gmail.com">fahdalharbi321@gmail.com</a></div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/fahad-al-harbi-3123922ba" target="_blank">LinkedIn</a>
+          <a href="https://fshsd.itch.io/" target="_blank">itch.io</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="profile.png" alt="Abdulsalam">
+        <div class="name">عبدالسلام | Abdulsalam</div>
+        <div class="job">أعداء، ذكاء اصطناعي، صوتيات<br><strong>Enemy Mechanics, AI, Sound</strong></div>
+        <div class="phone">0563153800</div>
+        <div class="email"><a href="mailto:Abdulsalamf1999@gmail.com">Abdulsalamf1999@gmail.com</a></div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/abdulsalam-farun-064207241" target="_blank">LinkedIn</a>
+          <a href="https://abdulsalamfarun.itch.io/" target="_blank">itch.io</a>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="card">
-    <img src="samei.jpg" alt="Sami">
-    <div class="name">سامي العضياني | Sami Alodyani</div>
-    <div class="job">تصميم اللعبة، الصوتيات، واجهة المستخدم<br><strong>Game Design, Sound, UI</strong></div>
-    <div class="phone">0509400546</div>
-    <div class="email"><a href="mailto:Alodyani.sami@gmail.com">Alodyani.sami@gmail.com</a></div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/sami-alotaibi-614636273" target="_blank">LinkedIn</a>
-      <a href="https://sami179.itch.io" target="_blank">itch.io</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="FAHAD.jpg" alt="Fahad">
-    <div class="name">فهد الحربي | Fahad Alharbi</div>
-    <div class="job">نمذجة اللاعب، ميكانيكيات اللاعب<br><strong>Player Modeling, Player Mechanics</strong></div>
-    <div class="phone">+966535501339</div>
-    <div class="email"><a href="mailto:fahdalharbi321@gmail.com">fahdalharbi321@gmail.com</a></div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/fahad-al-harbi-3123922ba" target="_blank">LinkedIn</a>
-      <a href="https://fshsd.itch.io/" target="_blank">itch.io</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="profile.png" alt="Abdulsalam">
-    <div class="name">عبدالسلام | Abdulsalam</div>
-    <div class="job">ميكانيكيات الأعداء، الذكاء الاصطناعي، الصوتيات<br><strong>Enemy Mechanics, AI, Sound</strong></div>
-    <div class="phone">0563153800</div>
-    <div class="email"><a href="mailto:Abdulsalamf1999@gmail.com">Abdulsalamf1999@gmail.com</a></div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/abdulsalam-farun-064207241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
-      <a href="https://abdulsalamfarun.itch.io/" target="_blank">itch.io</a>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
-<!-- ينتهي هنا -->
